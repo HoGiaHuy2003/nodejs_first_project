@@ -1,0 +1,37 @@
+<div class="mt-4">
+    {{!-- <form method="GET" action="/news"> --}}
+    <form method="POST">
+        <div class="mb-3">
+            {{!-- <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> --}}
+            <label for="search-input" class="form-label">Từ khoá</label>
+            {{!-- <input type="text" name="fullname">
+            <input type="text" name="age"> --}}
+            {{!-- <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> --}}
+            <input type="text" name="q" class="form-control" id="search-input" placeholder="Nhập từ khoá...">
+            {{!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> --}}
+        </div>
+
+        <div class="mb-3">
+            <label for="gender-input" class="form-label">Từ khoá</label>
+            <select name="gender" class="form-control" id="gender-input">
+                <option value="">-- Chọn giới tính --</option>
+                <option value="male">Nam</option>
+                <option value="female">Nữ</option>
+            </select>
+        </div>
+        
+        {{!-- <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div> --}}
+        {{!-- <button type="submit" class="btn btn-primary">Submit</button> --}}
+        <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+    </form>
+</div>
