@@ -1,25 +1,25 @@
 const newsRouter = require('./news');
-const siteRouter = require('./site')
+const siteRouter = require('./site');
 
 function route(app) {
     // route
     app.get('/', (req, res) => {
-    // var a = 1;
-    // var b = 2;
+        // var a = 1;
+        // var b = 2;
 
-    // var c = a + b;
+        // var c = a + b;
 
-    // return res.send('Hello World!');
+        // return res.send('Hello World!');
 
-    // return res.send(`<h1>Hello World!</h1>`);
+        // return res.send(`<h1>Hello World!</h1>`);
 
-    // return res.send(`<html><head></head><body><h1>Hello World!</h1></body></html>`);
+        // return res.send(`<html><head></head><body><h1>Hello World!</h1></body></html>`);
 
-    // return res.send(`<h1 style="color:red;">Hello World!</h1>`);
+        // return res.send(`<h1 style="color:red;">Hello World!</h1>`);
 
-    // return res.send(`123`);
+        // return res.send(`123`);
 
-    res.render('home');
+        res.render('home');
     });
 
     // app.get('/news', (req, res) => {
@@ -36,19 +36,18 @@ function route(app) {
     // Action ---> Dispatcher ---> Function handler
 
     app.get('/search', (req, res) => {
-    // console.log(req.query);
-    // console.log(req.query.q);
-    res.render('search');
+        // console.log(req.query);
+        // console.log(req.query.q);
+        res.render('search');
     });
 
     app.post('/search', (req, res) => {
+        // console.log(req.query);
 
-    // console.log(req.query);
+        console.log(req.body);
 
-    console.log(req.body);
-
-    // res.render('search');
-    res.send('');
+        // res.render('search');
+        res.send('');
     });
 }
 

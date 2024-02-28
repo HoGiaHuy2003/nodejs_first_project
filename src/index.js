@@ -9,22 +9,27 @@ const route = require('./routes');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(express.urlencoded({
-  extended: true,
-}));
+app.use(
+            express.urlencoded({
+                extended: true,
+            }),
+        );
 app.use(express.json());
 
-// XMLHttpRequest, fetch, axios, 
+// XMLHttpRequest, fetch, axios,
 
 // HTTP logger
 // app.use(morgan('combined'));
 
 // Template engine
 // app.engine('handlebars', handlebars.engine({ defaultLayout: 'main' }));
-app.engine('hbs', hbs.engine({ 
-  extname: '.hbs',
-  defaultLayout: 'main' 
-}));
+app.engine(
+    'hbs',
+    hbs.engine({
+        extname: '.hbs',
+        defaultLayout: 'main',
+    }),
+);
 
 app.set('view engine', 'hbs');
 // app.set('views', path.join(__dirname, 'views'));
@@ -53,7 +58,7 @@ route(app);
 //   // return res.send(`<html><head></head><body><h1>Hello World!</h1></body></html>`);
 
 //   // return res.send(`<h1 style="color:red;">Hello World!</h1>`);
-  
+
 //   // return res.send(`123`);
 
 //   res.render('home');
@@ -86,5 +91,5 @@ route(app);
 
 // 127.0.0.1 - localhost
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+    console.log(`Example app listening on port ${port}`);
 });
